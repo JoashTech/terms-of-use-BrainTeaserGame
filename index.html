@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Brain Teaser Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px 20px;
+            color: #2d3748;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4A90E2 0%, #9B51E0 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "🧠";
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.1;
+            right: -20px;
+            bottom: -20px;
+            transform: rotate(-15deg);
+        }
+        
+        .header::after {
+            content: "🎮";
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.1;
+            left: -20px;
+            top: -20px;
+            transform: rotate(15deg);
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .app-icon span {
+            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.3));
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .last-updated {
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .quick-nav {
+            background: #f7fafc;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .quick-nav a {
+            padding: 8px 16px;
+            background: white;
+            border-radius: 50px;
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .quick-nav a:hover {
+            background: #4A90E2;
+            color: white;
+            border-color: #4A90E2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(74,144,226,0.3);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            scroll-margin-top: 20px;
+        }
+        
+        .section h2 {
+            color: #2d3748;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #9B51E0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2 span {
+            font-size: 1.2em;
+            background: #9B51E0;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .section h3 {
+            color: #4A5568;
+            font-size: 1.3em;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section h3 span {
+            font-size: 1.2em;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        
+        .section ul, .section ol {
+            margin: 15px 0 15px 25px;
+            color: #4a5568;
+        }
+        
+        .section li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #ebf8ff 0%, #e9d8fd 100%);
+            border-left: 6px solid #9B51E0;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .warning-box {
+            background: #fff5f5;
+            border-left: 6px solid #f56565;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .info-box {
+            background: #f0fff4;
+            border-left: 6px solid #48bb78;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .third-party-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .third-party-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .third-party-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -8px rgba(155,81,224,0.3);
+            border-color: #9B51E0;
+        }
+        
+        .third-party-card h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .third-party-card h4 span {
+            font-size: 1.3em;
+        }
+        
+        .third-party-card p {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            color: #718096;
+        }
+        
+        .third-party-card a {
+            color: #9B51E0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .third-party-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        .badge-green {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .badge-blue {
+            background: #bee3f8;
+            color: #2c5282;
+        }
+        
+        .badge-purple {
+            background: #e9d8fd;
+            color: #553c9a;
+        }
+        
+       .contact-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px 25px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+}
+
+.contact-item span {
+    font-size: 2em;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content strong {
+    font-size: 1.1em;
+    color: white;
+}
+
+.contact-content small {
+    font-size: 0.85em;
+    color: rgba(255,255,255,0.8);
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+    min-width: 160px;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.contact-button span {
+    font-size: 1.2em;
+}
+        .footer {
+            background: #1a202c;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-quote {
+            font-style: italic;
+            color: #718096;
+            margin: 30px 0 20px;
+            font-size: 1.1em;
+            padding: 0 20px;
+        }
+        
+        .copyright {
+            color: #4a5568;
+            font-size: 0.9em;
+            margin-top: 30px;
+            border-top: 1px solid #2d3748;
+            padding-top: 30px;
+        }
+        
+        .toc {
+            background: #f7fafc;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .toc-item {
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .toc-item:hover {
+            background: #edf2f7;
+        }
+        
+        .toc-item a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .section h2 {
+                font-size: 1.5em;
+            }
+            
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .quick-nav a {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with App Icon -->
+        <div class="header">
+            <div class="app-icon">
+                <span>🧠</span>
+            </div>
+            <h1>Brain Teaser Game</h1>
+            <p>Terms of Use</p>
+            <div class="last-updated">
+                <span>📅 Last Updated: March 21, 2026</span>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Quick Navigation -->
+            <div class="quick-nav">
+                <a href="#introduction">📋 Introduction</a>
+                <a href="#license">📜 License</a>
+                <a href="#account">👤 Account</a>
+                <a href="#virtual-items">💰 Virtual Items</a>
+                <a href="#conduct">⚖️ User Conduct</a>
+                <a href="#leaderboard">🏆 Leaderboard</a>
+                <a href="#ads">📺 Ads</a>
+                <a href="#ip">©️ Intellectual Property</a>
+                <a href="#termination">🔚 Termination</a>
+                <a href="#liability">⚠️ Liability</a>
+                <a href="#contact">📧 Contact</a>
+            </div>
+            
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3 style="margin-bottom: 15px; color: #2d3748;">📋 Table of Contents</h3>
+                <div class="toc-grid">
+                    <div class="toc-item"><a href="#section1">1. Acceptance of Terms</a></div>
+                    <div class="toc-item"><a href="#section2">2. License to Use</a></div>
+                    <div class="toc-item"><a href="#section3">3. User Accounts</a></div>
+                    <div class="toc-item"><a href="#section4">4. Virtual Items & Currency</a></div>
+                    <div class="toc-item"><a href="#section5">5. User Conduct</a></div>
+                    <div class="toc-item"><a href="#section6">6. Leaderboards & Fair Play</a></div>
+                    <div class="toc-item"><a href="#section7">7. Advertisements</a></div>
+                    <div class="toc-item"><a href="#section8">8. Intellectual Property</a></div>
+                    <div class="toc-item"><a href="#section9">9. Third-Party Services</a></div>
+                    <div class="toc-item"><a href="#section10">10. Termination</a></div>
+                    <div class="toc-item"><a href="#section11">11. Limitation of Liability</a></div>
+                    <div class="toc-item"><a href="#section12">12. Changes to Terms</a></div>
+                    <div class="toc-item"><a href="#section13">13. Governing Law</a></div>
+                    <div class="toc-item"><a href="#section14">14. Contact Information</a></div>
+                </div>
+            </div>
+            
+            <!-- Section 1: Acceptance of Terms -->
+            <div class="section" id="section1">
+                <h2><span>1</span> Acceptance of Terms</h2>
+                <p>By downloading, installing, or using Brain Teaser Game ("the Game"), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use the Game.</p>
+                <div class="info-box">
+                    <p><strong>📌 Key Point:</strong> Your use of the Game constitutes your acceptance of these terms. We may update these terms from time to time, and your continued use means you accept the updated terms.</p>
+                </div>
+            </div>
+            
+            <!-- Section 2: License to Use -->
+            <div class="section" id="section2">
+                <h2><span>2</span> License to Use</h2>
+                <p>JoshTechApps grants you a non-exclusive, non-transferable, revocable license to use the Game for personal, non-commercial entertainment purposes on devices you own or control.</p>
+                <div class="warning-box">
+                    <p><strong>⚠️ You may NOT:</strong></p>
+                    <ul>
+                        <li>Copy, modify, or distribute the Game</li>
+                        <li>Reverse engineer, decompile, or extract source code</li>
+                        <li>Sell, rent, or sublicense the Game</li>
+                        <li>Use the Game for commercial purposes</li>
+                        <li>Remove any copyright notices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Section 3: User Accounts -->
+            <div class="section" id="section3">
+                <h2><span>3</span> User Accounts & Authentication</h2>
+                <p>The Game uses Firebase Anonymous Authentication to create a unique identifier for your gameplay experience. This allows us to:</p>
+                <ul>
+                    <li>Save your game progress locally</li>
+                    <li>Track your leaderboard rankings</li>
+                    <li>Maintain your achievements and statistics</li>
+                    <li>Identify you in global, weekly, monthly, and country leaderboards</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><strong>🔐 Account Security:</strong> You are responsible for maintaining the security of your device. Your anonymous account cannot be recovered if you uninstall the Game or clear app data. We recommend not sharing your device with others while using the Game.</p>
+                </div>
+            </div>
+            
+            <!-- Section 4: Virtual Items & Currency -->
+            <div class="section" id="section4">
+                <h2><span>4</span> Virtual Items & Currency</h2>
+                
+                <h3><span>🪙</span> Coins System</h3>
+                <p>Coins are virtual currency used within the Brain Teaser Game to enhance your gameplay experience. They have no real-world value and cannot be exchanged for cash, goods, or services.</p>
+                
+                <h4>How to Earn Coins:</h4>
+                <ul>
+                    <li><strong>Correct Answers</strong>: +2 coins per correct answer</li>
+                    <li><strong>Level Completion</strong>: Bonus coins based on performance</li>
+                    <li><strong>Perfect Levels (5/5)</strong>: +5 bonus coins</li>
+                    <li><strong>Daily Challenge</strong>: 10-20 coins (can be doubled via ads)</li>
+                    <li><strong>Daily Login Bonus</strong>: 50 coins daily</li>
+                    <li><strong>Share App</strong>: 3 coins per share (3x daily limit)</li>
+                    <li><strong>Achievements</strong>: 5-200 coins for unlocking achievements</li>
+                    <li><strong>Watching Rewarded Ads</strong>: Various coin rewards</li>
+                </ul>
+                
+                <h4>How Coins Are Used:</h4>
+                <ul>
+                    <li><strong>Hints</strong>: 5 coins to reveal answer hints</li>
+                    <li><strong>Skip Questions</strong>: 5 coins to skip a question</li>
+                    <li><strong>Time Extension</strong>: 5 coins for +10 seconds</li>
+                    <li><strong>Lives Packs</strong>: Purchase additional lives in the Shop</li>
+                    <li><strong>Flash Sales</strong>: Special offers (e.g., 100 coins + 5 lives for 50 coins)</li>
+                </ul>
+                
+                <h3><span>❤️</span> Lives System</h3>
+                <p>Lives are required to play levels. Each incorrect answer costs 1 life. Lives regenerate at a rate of 1 life every 30 minutes. You can also purchase lives in the Shop using coins.</p>
+                
+                <div class="info-box">
+                    <p><strong>💰 Important:</strong> Virtual items have no real-world value and are non-refundable. All purchases are final. Coins and lives cannot be transferred between accounts.</p>
+                </div>
+            </div>
+            
+            <!-- Section 5: User Conduct -->
+            <div class="section" id="section5">
+                <h2><span>5</span> User Conduct & Fair Play</h2>
+                <p>You agree to use the Game responsibly and ethically. Prohibited activities include:</p>
+                <ul>
+                    <li>Cheating, hacking, or exploiting bugs</li>
+                    <li>Using bots, automation, or unauthorized third-party software</li>
+                    <li>Creating multiple accounts to manipulate leaderboards</li>
+                    <li>Attempting to reverse engineer the Game</li>
+                    <li>Impersonating other players or JoshTechApps staff</li>
+                    <li>Harassing other players or posting inappropriate content</li>
+                    <li>Manipulating device date/time settings to cheat daily rewards</li>
+                </ul>
+                <div class="warning-box">
+                    <p><strong>⚖️ Consequences:</strong> Violation of these rules may result in suspension or permanent banning from leaderboards, resetting of progress, or termination of access to the Game.</p>
+                </div>
+            </div>
+            
+            <!-- Section 6: Leaderboards & Fair Play -->
+            <div class="section" id="section6">
+                <h2><span>6</span> Leaderboards & Rankings</h2>
+                <p>The Game features global, weekly, monthly, and country-specific leaderboards powered by Firebase Firestore. Leaderboards are ranked by:</p>
+                <ul>
+                    <li><strong>Total Coins Earned (Lifetime)</strong> - Primary ranking metric</li>
+                    <li>Total Games Played</li>
+                    <li>Perfect Levels Completed</li>
+                    <li>Current Streak</li>
+                    <li>Longest Streak</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><strong>🏆 Fair Play:</strong> Leaderboard rankings are based on lifetime earnings, not current coin balance. This ensures that spending coins doesn't lower your rank. We reserve the right to remove players who manipulate rankings through unfair means.</p>
+                </div>
+            </div>
+            
+            <!-- Section 7: Advertisements -->
+            <div class="section" id="section7">
+                <h2><span>7</span> Advertisements</h2>
+                <p>The Game displays advertisements from third-party ad networks to support free gameplay. These include:</p>
+                
+                <div class="third-party-grid">
+                    <div class="third-party-card">
+                        <h4><span>📱</span> Google AdMob</h4>
+                        <p>Rewarded ads, interstitial ads, and banner ads</p>
+                        <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy →</a>
+                    </div>
+                    <div class="third-party-card">
+                        <h4><span>🎮</span> Unity Ads</h4>
+                        <p>Video ads for coin rewards</p>
+                        <a href="https://unity.com/legal/privacy-policy" target="_blank">Privacy Policy →</a>
+                    </div>
+                    <div class="third-party-card">
+                        <h4><span>📺</span> Liftoff (Vungle)</h4>
+                        <p>Video and interstitial ads</p>
+                        <a href="https://vungle.com/privacy/" target="_blank">Privacy Policy →</a>
+                    </div>
+                    <div class="third-party-card">
+                        <h4><span>👥</span> Facebook Audience</h4>
+                        <p>Native and rewarded ads</p>
+                        <a href="https://www.facebook.com/about/privacy/" target="_blank">Privacy Policy →</a>
+                    </div>
+                </div>
+                
+                <p>You may purchase ad-free subscriptions to remove all advertisements from the Game.</p>
+            </div>
+            
+            <!-- Section 8: Intellectual Property -->
+            <div class="section" id="section8">
+                <h2><span>8</span> Intellectual Property Rights</h2>
+                <p>All content in the Game, including but not limited to:</p>
+                <ul>
+                    <li>Graphics, animations, and visual designs</li>
+                    <li>Sound effects and music</li>
+                    <li>Questions, answers, and game logic</li>
+                    <li>Lottie animations and custom UI elements</li>
+                    <li>Code, algorithms, and software architecture</li>
+                    <li>Trademarks, logos, and brand elements</li>
+                </ul>
+                <p>are the exclusive property of JoshTechApps and are protected by international copyright, trademark, and intellectual property laws.</p>
+                <div class="warning-box">
+                    <p><strong>©️ Copyright Notice:</strong> © 2024-2026 JoshTechApps. All rights reserved. Unauthorized reproduction or distribution is strictly prohibited.</p>
+                </div>
+            </div>
+            
+            <!-- Section 9: Third-Party Services -->
+            <div class="section" id="section9">
+                <h2><span>9</span> Third-Party Services</h2>
+                <p>The Game integrates with the following third-party services. Their terms and policies apply to your use:</p>
+                
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+                    <tr style="background: #f7fafc;">
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Service</th>
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Purpose</th>
+                        <th style="padding: 12px; text-align: left; border-bottom: 2px solid #e2e8f0;">Policy</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Firebase (Google)</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Authentication, Database, Analytics, Crashlytics</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><a href="https://policies.google.com/privacy">Google Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Google AdMob</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Rewarded, Interstitial, Banner Ads</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><a href="https://policies.google.com/privacy">Google Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Unity Ads</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Video Ads</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><a href="https://unity.com/legal/privacy-policy">Unity Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Liftoff (Vungle)</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Video Ads</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><a href="https://vungle.com/privacy/">Vungle Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Facebook Audience</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;">Native Ads</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #e2e8f0;"><a href="https://www.facebook.com/about/privacy/">Facebook Privacy</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px;">Google Play</td>
+                        <td style="padding: 12px;">In-App Purchases, Updates</td>
+                        <td style="padding: 12px;"><a href="https://play.google.com/about/play-terms/">Play Terms</a></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Section 10: Termination -->
+            <div class="section" id="section10">
+                <h2><span>10</span> Termination</h2>
+                <p>JoshTechApps reserves the right to terminate or suspend your access to the Game immediately, without prior notice or liability, for any reason, including breach of these Terms.</p>
+                <p>You may stop using the Game at any time by uninstalling it from your device.</p>
+            </div>
+            
+            <!-- Section 11: Limitation of Liability -->
+            <div class="section" id="section11">
+                <h2><span>11</span> Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, JoshTechApps shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
+                <ul>
+                    <li>Your use or inability to use the Game</li>
+                    <li>Any conduct or content of any third party</li>
+                    <li>Unauthorized access, use, or alteration of your data</li>
+                    <li>Any bugs, viruses, or other harmful code</li>
+                </ul>
+                <div class="warning-box">
+                    <p><strong>⚠️ The Game is provided "AS IS" without warranties of any kind.</strong></p>
+                </div>
+            </div>
+            
+            <!-- Section 12: Changes to Terms -->
+            <div class="section" id="section12">
+                <h2><span>12</span> Changes to Terms</h2>
+                <p>We may update these Terms from time to time. We will notify you of material changes by updating the "Last Updated" date at the top of these Terms and through in-app notifications. Your continued use of the Game after changes constitutes acceptance of the new Terms.</p>
+            </div>
+            
+            <!-- Section 13: Governing Law -->
+            <div class="section" id="section13">
+                <h2><span>13</span> Governing Law</h2>
+                <p>These Terms shall be governed by the laws of [Your Country/State], without regard to its conflict of law provisions.</p>
+            </div>
+            
+        <!-- Section 14: Contact Information -->
+<div class="section" id="section14">
+    <h2><span>14</span> Contact Us</h2>
+    
+    <div class="contact-section">
+        <h3 style="color: white; margin-bottom: 20px;">📬 Get in Touch</h3>
+        
+        <!-- Contact Cards -->
+        <div class="contact-grid">
+            <!-- Email Card -->
+            <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Brain%20Teaser%20Game%20Support'">
+                <span>📧</span>
+                <div class="contact-content">
+                    <strong>EMAIL US NOW</strong>
+                    <small>contactjoshtech@gmail.com</small>
+                </div>
+            </div>
+            
+            <!-- Website Card -->
+            <div class="contact-item" onclick="window.open('https://joshtechapps.netlify.app', '_blank')">
+                <span>🌐</span>
+                <div class="contact-content">
+                    <strong>VISIT OUR WEBSITE</strong>
+                    <small>joshtechapps.netlify.app</small>
+                </div>
+            </div>
+            
+            <!-- Support Card -->
+            <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Support%20Request&body=Hello%20JoshTechApps%20Support%20Team%2C%0A%0AI%20need%20help%20with%20...'">
+                <span>🆘</span>
+                <div class="contact-content">
+                    <strong>SUPPORT</strong>
+                    <small>24/7 Email Support</small>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Action Buttons -->
+        <div style="display: flex; gap: 15px; justify-content: center; margin: 30px 0 10px; flex-wrap: wrap;">
+            <a href="mailto:contactjoshtech@gmail.com" class="contact-button" style="background: #48bb78;">
+                <span>📧</span> EMAIL US NOW
+            </a>
+            
+            <a href="https://joshtechapps.netlify.app" target="_blank" class="contact-button" style="background: #4299e1;">
+                <span>🌐</span> VISIT WEBSITE
+            </a>
+        </div>
+        
+        <!-- Response Time -->
+        <p style="margin-top: 25px; color: rgba(255,255,255,0.9); font-size: 1.1em;">
+            ⏱️ We typically respond within <strong>24-48 hours</strong>
+        </p>
+        
+        <!-- Developer Info -->
+        <div style="margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 15px;">
+            <p style="color: white; margin: 0;">
+                <strong>JoshTechApps</strong> • Making learning fun since 2024
+            </p>
+        </div>
+    </div>
+</div>
+            
+            <!-- Third-Party Disclosures Summary -->
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h3 style="margin-bottom: 15px;">📢 Third-Party Disclosures</h3>
+                <p>This app integrates with the following third-party services. Each service independently collects and processes data according to their privacy policies:</p>
+                <ul style="margin-top: 10px;">
+                    <li><strong>Google Firebase</strong> - Authentication, database, analytics, crash reporting</li>
+                    <li><strong>Google AdMob</strong> - Rewarded, interstitial, and banner advertisements</li>
+                    <li><strong>Unity Ads</strong> - Video advertisements for coin rewards</li>
+                    <li><strong>Liftoff (Vungle)</strong> - Video and interstitial advertisements</li>
+                    <li><strong>Facebook Audience Network</strong> - Native advertisements</li>
+                    <li><strong>Google Play</strong> - In-app purchases and app updates</li>
+                </ul>
+                <p style="margin-top: 15px;">Links to their privacy policies are provided in Section 9 above.</p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="app-icon" style="background: #2d3748; margin-bottom: 20px;">
+                <span>🧠</span>
+            </div>
+            
+            <h3 style="color: white; margin-bottom: 20px;">Brain Teaser Game</h3>
+            
+            <div class="footer-links">
+                <a href="#">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="https://joshtechapps.netlify.app">Website</a>
+                <a href="mailto:contactjoshtech@gmail.com">Contact</a>
+            </div>
+            
+            <div class="footer-quote">
+                "Train your brain, challenge your mind - every question is a step toward mastery."
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024-2026 JoshTechApps. All rights reserved.</p>
+                <p style="margin-top: 10px; font-size: 0.8em;">This app is not affiliated with any specific quiz organization. All questions are created for entertainment purposes.</p>
+                <p style="margin-top: 15px;">Made with ❤️ in Kampala</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentYear = new Date().getFullYear();
+            const copyrightElements = document.querySelectorAll('.copyright');
+            copyrightElements.forEach(el => {
+                el.innerHTML = el.innerHTML.replace(/2024-2026/g, `2024-${currentYear}`);
+            });
+        });
+    </script>
+</body>
+</html>
