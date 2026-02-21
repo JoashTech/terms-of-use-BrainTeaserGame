@@ -306,7 +306,87 @@
             background: #e9d8fd;
             color: #553c9a;
         }
-        
+        .contact-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px 25px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+    min-width: 250px;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+}
+
+.contact-item span {
+    font-size: 2em;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content strong {
+    font-size: 1.1em;
+    color: white;
+}
+
+.contact-content small {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+    min-width: 160px;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button span {
+    font-size: 1.2em;
+}
        .contact-item {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -758,6 +838,7 @@
             </div>
             
         <!-- Section 14: Contact Information -->
+<!-- Section 14: Contact Information -->
 <div class="section" id="section14">
     <h2><span>14</span> Contact Us</h2>
     
@@ -780,7 +861,7 @@
                 <span>🌐</span>
                 <div class="contact-content">
                     <strong>VISIT OUR WEBSITE</strong>
-                    <small>joshtechapps.netlify.app</small>
+                
                 </div>
             </div>
             
@@ -818,6 +899,8 @@
         </div>
     </div>
 </div>
+        
+      
             
             <!-- Third-Party Disclosures Summary -->
             <div class="highlight-box" style="margin-top: 40px;">
@@ -857,7 +940,7 @@
             <div class="copyright">
                 <p>© 2024-2026 JoshTechApps. All rights reserved.</p>
                 <p style="margin-top: 10px; font-size: 0.8em;">This app is not affiliated with any specific quiz organization. All questions are created for entertainment purposes.</p>
-                <p style="margin-top: 15px;">Made with ❤️ in Kampala</p>
+                <p style="margin-top: 15px;">Made with ❤️ for Learning </p>
             </div>
         </div>
     </div>
