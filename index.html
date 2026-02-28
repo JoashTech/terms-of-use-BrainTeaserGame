@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Brain Teaser Game</title>
     <style>
+        /* ALL YOUR EXISTING STYLES REMAIN EXACTLY THE SAME */
         * {
             margin: 0;
             padding: 0;
@@ -558,7 +559,7 @@
             <h1>Brain Teaser Game</h1>
             <p>Terms of Use</p>
             <div class="last-updated">
-                <span>📅 Last Updated: March 21, 2026</span>
+                <span>📅 Last Updated: March 28, 2026</span>
             </div>
         </div>
         
@@ -574,6 +575,8 @@
                 <a href="#leaderboard">🏆 Leaderboard</a>
                 <a href="#ads">📺 Ads</a>
                 <a href="#ip">©️ Intellectual Property</a>
+                <a href="#copyright">⚖️ Copyright Complaints</a>
+                <a href="#age">👶 Age Requirements</a>
                 <a href="#termination">🔚 Termination</a>
                 <a href="#liability">⚠️ Liability</a>
                 <a href="#contact">📧 Contact</a>
@@ -591,12 +594,14 @@
                     <div class="toc-item"><a href="#section6">6. Leaderboards & Fair Play</a></div>
                     <div class="toc-item"><a href="#section7">7. Advertisements</a></div>
                     <div class="toc-item"><a href="#section8">8. Intellectual Property</a></div>
-                    <div class="toc-item"><a href="#section9">9. Third-Party Services</a></div>
-                    <div class="toc-item"><a href="#section10">10. Termination</a></div>
-                    <div class="toc-item"><a href="#section11">11. Limitation of Liability</a></div>
-                    <div class="toc-item"><a href="#section12">12. Changes to Terms</a></div>
-                    <div class="toc-item"><a href="#section13">13. Governing Law</a></div>
-                    <div class="toc-item"><a href="#section14">14. Contact Information</a></div>
+                    <div class="toc-item"><a href="#section9">9. Copyright Complaints</a></div>
+                    <div class="toc-item"><a href="#section10">10. Age Requirements</a></div>
+                    <div class="toc-item"><a href="#section11">11. Third-Party Services</a></div>
+                    <div class="toc-item"><a href="#section12">12. Termination</a></div>
+                    <div class="toc-item"><a href="#section13">13. Limitation of Liability</a></div>
+                    <div class="toc-item"><a href="#section14">14. Changes to Terms</a></div>
+                    <div class="toc-item"><a href="#section15">15. Governing Law</a></div>
+                    <div class="toc-item"><a href="#section16">16. Contact Information</a></div>
                 </div>
             </div>
             
@@ -694,23 +699,49 @@
                 </div>
             </div>
             
-            <!-- Section 6: Leaderboards & Fair Play -->
+            <!-- Section 6: Leaderboards & Fair Play - ENHANCED -->
             <div class="section" id="section6">
                 <h2><span>6</span> Leaderboards & Rankings</h2>
-                <p>The Game features global, weekly, monthly, and country-specific leaderboards powered by Firebase Firestore. Leaderboards are ranked by:</p>
-                <ul>
-                    <li><strong>Total Coins Earned (Lifetime)</strong> - Primary ranking metric</li>
-                    <li>Total Games Played</li>
-                    <li>Perfect Levels Completed</li>
-                    <li>Current Streak</li>
-                    <li>Longest Streak</li>
-                </ul>
+                <p>The Game features global, weekly, monthly, and country-specific leaderboards powered by Firebase Firestore. Compete with players from around the world!</p>
+                
+                <div style="background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%); color: white; padding: 25px; border-radius: 20px; margin: 25px 0;">
+                    <h3 style="color: #9B51E0; margin-bottom: 15px;">🏆 How Leaderboards Work</h3>
+                    
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; margin: 20px 0;">
+                        <span style="background: #9B51E0; color: white; padding: 6px 16px; border-radius: 50px; font-weight: bold;">🌍 GLOBAL</span>
+                        <span style="background: #9B51E0; color: white; padding: 6px 16px; border-radius: 50px; font-weight: bold;">📅 WEEKLY</span>
+                        <span style="background: #9B51E0; color: white; padding: 6px 16px; border-radius: 50px; font-weight: bold;">📆 MONTHLY</span>
+                        <span style="background: #9B51E0; color: white; padding: 6px 16px; border-radius: 50px; font-weight: bold;">📍 COUNTRY</span>
+                    </div>
+                    
+                    <h4 style="color: #9B51E0; margin-top: 20px;">📊 Ranking Criteria</h4>
+                    <p>Players are ranked by <strong>Lifetime Coins Earned</strong> - not current coin balance! This means spending coins DOES NOT lower your rank.</p>
+                    
+                    <h4 style="color: #9B51E0; margin-top: 20px;">📈 What Affects Your Rank</h4>
+                    <ul>
+                        <li><strong>🪙 Lifetime Coins</strong> - Primary ranking metric</li>
+                        <li><strong>🎮 Total Games Played</strong> - Secondary factor</li>
+                        <li><strong>⭐ Perfect Levels</strong> - Bonus ranking weight</li>
+                        <li><strong>🔥 Current Streak</strong> - Shows active players</li>
+                        <li><strong>📊 Longest Streak</strong> - Dedication metric</li>
+                    </ul>
+                    
+                    <h4 style="color: #9B51E0; margin-top: 20px;">👑 Special Features</h4>
+                    <ul>
+                        <li><strong>Top 3 players</strong> appear with gold, silver, and bronze crowns</li>
+                        <li><strong>Your rank</strong> is highlighted in the footer with a neon blue badge</li>
+                        <li><strong>Country leaderboards</strong> show how you rank in your region</li>
+                        <li><strong>Weekly & Monthly leaderboards</strong> reset for fresh competition</li>
+                        <li><strong>Pull to refresh</strong> for latest rankings</li>
+                    </ul>
+                </div>
+                
                 <div class="highlight-box">
                     <p><strong>🏆 Fair Play:</strong> Leaderboard rankings are based on lifetime earnings, not current coin balance. This ensures that spending coins doesn't lower your rank. We reserve the right to remove players who manipulate rankings through unfair means.</p>
                 </div>
             </div>
             
-            <!-- Section 7: Advertisements -->
+            <!-- Section 7: Advertisements - WITH SMALL LEGAL ADDITION -->
             <div class="section" id="section7">
                 <h2><span>7</span> Advertisements</h2>
                 <p>The Game displays advertisements from third-party ad networks to support free gameplay. These include:</p>
@@ -718,7 +749,7 @@
                 <div class="third-party-grid">
                     <div class="third-party-card">
                         <h4><span>📱</span> Google AdMob</h4>
-                        <p>Rewarded ads, interstitial ads, and banner ads</p>
+                        <p>For ads</p>
                         <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy →</a>
                     </div>
                     <div class="third-party-card">
@@ -728,14 +759,18 @@
                     </div>
                     <div class="third-party-card">
                         <h4><span>📺</span> Liftoff (Vungle)</h4>
-                        <p>Video and interstitial ads</p>
+                        <p>For some ads</p>
                         <a href="https://vungle.com/privacy/" target="_blank">Privacy Policy →</a>
                     </div>
                     <div class="third-party-card">
                         <h4><span>👥</span> Facebook Audience</h4>
-                        <p>Native and rewarded ads</p>
+                        <p>For some ads</p>
                         <a href="https://www.facebook.com/about/privacy/" target="_blank">Privacy Policy →</a>
                     </div>
+                </div>
+                
+                <div class="info-box">
+                    <p><strong>📢 Ad Personalization:</strong> Advertisements may be personalized based on your device information and preferences. You can manage ad personalization settings in your device settings (Google Settings → Ads).</p>
                 </div>
                 
                 <p>You may purchase ad-free subscriptions to remove all advertisements from the Game.</p>
@@ -759,9 +794,52 @@
                 </div>
             </div>
             
-            <!-- Section 9: Third-Party Services -->
+            <!-- Section 9: NEW - Copyright Complaints (DMCA) -->
             <div class="section" id="section9">
-                <h2><span>9</span> Third-Party Services</h2>
+                <h2><span>9</span> Copyright Complaints</h2>
+                <p>JoshTechApps respects the intellectual property rights of others. If you believe that any content in the Brain Teaser Game infringes upon your copyright, please contact us with the following information:</p>
+                
+                <div class="warning-box">
+                    <h4 style="margin-bottom: 15px;">📝 DMCA Takedown Notice Requirements:</h4>
+                    <ul>
+                        <li>Your contact information (name, address, email, phone)</li>
+                        <li>Description of the copyrighted work you claim has been infringed</li>
+                        <li>Location of the infringing material in the Game</li>
+                        <li>A statement that you have a good faith belief that use is not authorized</li>
+                        <li>A statement, under penalty of perjury, that the information is accurate</li>
+                        <li>Your physical or electronic signature</li>
+                    </ul>
+                </div>
+                
+                <p>Send copyright complaints to:</p>
+                <div style="background: #f7fafc; padding: 20px; border-radius: 15px; margin: 15px 0;">
+                    <p><strong>📧 Email:</strong> contactjoshtech@gmail.com (Subject: Copyright Complaint)</p>
+                    <p><strong>📬 Address:</strong> JoshTechApps, Attn: Copyright Agent, [Your Address]</p>
+                </div>
+                <p>We will respond to valid copyright complaints and remove infringing content as required by law.</p>
+            </div>
+            
+            <!-- Section 10: NEW - Age Requirements -->
+            <div class="section" id="section10">
+                <h2><span>10</span> Age Requirements</h2>
+                
+                <div class="info-box">
+                    <p><strong>👶 Important Age Information:</strong></p>
+                    <ul>
+                        <li>The Brain Teaser Game is intended for users aged <strong>13 and above</strong>.</li>
+                        <li>If you are under 13, you must not use this Game without parental consent and supervision.</li>
+                        <li>We do not knowingly collect personal information from children under 13.</li>
+                        <li>If you believe a child under 13 has provided us with personal information, please contact us immediately so we can delete it.</li>
+                        <li>Parents/guardians are responsible for supervising minors' use of the Game.</li>
+                    </ul>
+                </div>
+                
+                <p>By using the Game, you represent that you are at least 13 years of age, or if you are under 13, that you have obtained parental consent to use the Game.</p>
+            </div>
+            
+            <!-- Section 11: Third-Party Services (renumbered) -->
+            <div class="section" id="section11">
+                <h2><span>11</span> Third-Party Services</h2>
                 <p>The Game integrates with the following third-party services. Their terms and policies apply to your use:</p>
                 
                 <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
@@ -803,16 +881,16 @@
                 </table>
             </div>
             
-            <!-- Section 10: Termination -->
-            <div class="section" id="section10">
-                <h2><span>10</span> Termination</h2>
+            <!-- Section 12: Termination (renumbered) -->
+            <div class="section" id="section12">
+                <h2><span>12</span> Termination</h2>
                 <p>JoshTechApps reserves the right to terminate or suspend your access to the Game immediately, without prior notice or liability, for any reason, including breach of these Terms.</p>
                 <p>You may stop using the Game at any time by uninstalling it from your device.</p>
             </div>
             
-            <!-- Section 11: Limitation of Liability -->
-            <div class="section" id="section11">
-                <h2><span>11</span> Limitation of Liability</h2>
+            <!-- Section 13: Limitation of Liability (renumbered) -->
+            <div class="section" id="section13">
+                <h2><span>13</span> Limitation of Liability</h2>
                 <p>To the maximum extent permitted by law, JoshTechApps shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from:</p>
                 <ul>
                     <li>Your use or inability to use the Game</li>
@@ -825,82 +903,92 @@
                 </div>
             </div>
             
-            <!-- Section 12: Changes to Terms -->
-            <div class="section" id="section12">
-                <h2><span>12</span> Changes to Terms</h2>
+            <!-- Section 14: Changes to Terms (renumbered) -->
+            <div class="section" id="section14">
+                <h2><span>14</span> Changes to Terms</h2>
                 <p>We may update these Terms from time to time. We will notify you of material changes by updating the "Last Updated" date at the top of these Terms and through in-app notifications. Your continued use of the Game after changes constitutes acceptance of the new Terms.</p>
             </div>
             
-            <!-- Section 13: Governing Law -->
-            <div class="section" id="section13">
-                <h2><span>13</span> Governing Law</h2>
-                <p>These Terms shall be governed by the laws of [Your Country/State], without regard to its conflict of law provisions.</p>
+            <!-- Section 15: Governing Law (renumbered) -->
+            <div class="section" id="section15">
+                <h2><span>15</span> Governing Law</h2>
+                <p>These Terms shall be governed by the laws of Uganda, without regard to its conflict of law provisions.</p>
             </div>
             
-        <!-- Section 14: Contact Information -->
-<!-- Section 14: Contact Information -->
-<div class="section" id="section14">
-    <h2><span>14</span> Contact Us</h2>
-    
-    <div class="contact-section">
-        <h3 style="color: white; margin-bottom: 20px;">📬 Get in Touch</h3>
-        
-        <!-- Contact Cards -->
-        <div class="contact-grid">
-            <!-- Email Card -->
-            <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Brain%20Teaser%20Game%20Support'">
-                <span>📧</span>
-                <div class="contact-content">
-                    <strong>EMAIL US NOW</strong>
-                    <small>contactjoshtech@gmail.com</small>
-                </div>
-            </div>
-            
-            <!-- Website Card -->
-            <div class="contact-item" onclick="window.open('https://joshtechapps.netlify.app', '_blank')">
-                <span>🌐</span>
-                <div class="contact-content">
-                    <strong>VISIT OUR WEBSITE</strong>
+            <!-- Section 16: Contact Information (renumbered) -->
+            <div class="section" id="section16">
+                <h2><span>16</span> Contact Us</h2>
                 
+                <div class="contact-section">
+                    <h3 style="color: white; margin-bottom: 20px;">📬 Get in Touch</h3>
+                    
+                    <!-- Contact Cards -->
+                    <div class="contact-grid">
+                        <!-- Email Card -->
+                        <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Brain%20Teaser%20Game%20Support'">
+                            <span>📧</span>
+                            <div class="contact-content">
+                                <strong>EMAIL US NOW</strong>
+                                <small>contactjoshtech@gmail.com</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Website Card -->
+                        <div class="contact-item" onclick="window.open('https://joshtechapps.netlify.app', '_blank')">
+                            <span>🌐</span>
+                            <div class="contact-content">
+                                <strong>VISIT OUR WEBSITE</strong>
+                            
+                            </div>
+                        </div>
+                        
+                        <!-- Support Card -->
+                        <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Support%20Request&body=Hello%20JoshTechApps%20Support%20Team%2C%0A%0AI%20need%20help%20with%20...'">
+                            <span>🆘</span>
+                            <div class="contact-content">
+                                <strong>SUPPORT</strong>
+                                <small>24/7 Email Support</small>
+                            </div>
+                        </div>
+                        
+                        <!-- NEW: Copyright Complaints Card -->
+                        <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Copyright%20Complaint&body=Hello%20JoshTechApps%20Copyright%20Team%2C%0A%0AI%20wish%20to%20report%20a%20copyright%20issue...'">
+                            <span>⚖️</span>
+                            <div class="contact-content">
+                                <strong>COPYRIGHT COMPLAINTS</strong>
+                                <small>DMCA Agent</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Action Buttons -->
+                    <div style="display: flex; gap: 15px; justify-content: center; margin: 30px 0 10px; flex-wrap: wrap;">
+                        <a href="mailto:contactjoshtech@gmail.com" class="contact-button" style="background: #48bb78;">
+                            <span>📧</span> EMAIL US
+                        </a>
+                        
+                        <a href="https://joshtechapps.netlify.app" target="_blank" class="contact-button" style="background: #4299e1;">
+                            <span>🌐</span> WEBSITE
+                        </a>
+                        
+                        <a href="mailto:contactjoshtech@gmail.com?subject=Copyright%20Complaint" class="contact-button" style="background: #f56565;">
+                            <span>⚖️</span> COPYRIGHT
+                        </a>
+                    </div>
+                    
+                    <!-- Response Time -->
+                    <p style="margin-top: 25px; color: rgba(255,255,255,0.9); font-size: 1.1em;">
+                        ⏱️ We typically respond within <strong>24-48 hours</strong>
+                    </p>
+                    
+                    <!-- Developer Info -->
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 15px;">
+                        <p style="color: white; margin: 0;">
+                            <strong>JoshTechApps</strong> • Making learning fun since 2024
+                        </p>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Support Card -->
-            <div class="contact-item" onclick="window.location.href='mailto:contactjoshtech@gmail.com?subject=Support%20Request&body=Hello%20JoshTechApps%20Support%20Team%2C%0A%0AI%20need%20help%20with%20...'">
-                <span>🆘</span>
-                <div class="contact-content">
-                    <strong>SUPPORT</strong>
-                    <small>24/7 Email Support</small>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Quick Action Buttons -->
-        <div style="display: flex; gap: 15px; justify-content: center; margin: 30px 0 10px; flex-wrap: wrap;">
-            <a href="mailto:contactjoshtech@gmail.com" class="contact-button" style="background: #48bb78;">
-                <span>📧</span> EMAIL US NOW
-            </a>
-            
-            <a href="https://joshtechapps.netlify.app" target="_blank" class="contact-button" style="background: #4299e1;">
-                <span>🌐</span> VISIT WEBSITE
-            </a>
-        </div>
-        
-        <!-- Response Time -->
-        <p style="margin-top: 25px; color: rgba(255,255,255,0.9); font-size: 1.1em;">
-            ⏱️ We typically respond within <strong>24-48 hours</strong>
-        </p>
-        
-        <!-- Developer Info -->
-        <div style="margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 15px;">
-            <p style="color: white; margin: 0;">
-                <strong>JoshTechApps</strong> • Making learning fun since 2024
-            </p>
-        </div>
-    </div>
-</div>
-        
-      
             
             <!-- Third-Party Disclosures Summary -->
             <div class="highlight-box" style="margin-top: 40px;">
@@ -914,7 +1002,7 @@
                     <li><strong>Facebook Audience Network</strong> - Native advertisements</li>
                     <li><strong>Google Play</strong> - In-app purchases and app updates</li>
                 </ul>
-                <p style="margin-top: 15px;">Links to their privacy policies are provided in Section 9 above.</p>
+                <p style="margin-top: 15px;">Links to their privacy policies are provided in Section 11 above.</p>
             </div>
         </div>
         
@@ -940,7 +1028,8 @@
             <div class="copyright">
                 <p>© 2024-2026 JoshTechApps. All rights reserved.</p>
                 <p style="margin-top: 10px; font-size: 0.8em;">This app is not affiliated with any specific quiz organization. All questions are created for entertainment purposes.</p>
-                <p style="margin-top: 15px;">Made with ❤️ for Learning </p>
+                <p style="margin-top: 15px;">For copyright complaints, please contact our DMCA Agent at <strong>contactjoshtech@gmail.com</strong></p>
+                <p style="margin-top: 15px;">Made with ❤️ for Learning</p>
             </div>
         </div>
     </div>
